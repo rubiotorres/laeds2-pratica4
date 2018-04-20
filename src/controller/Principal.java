@@ -25,7 +25,7 @@ public class Principal {
             i++;
         }
     }
-    
+
     private static List<Item> criaListaOrdenada(int inicio, int quantidade) {
         ArrayList<Item> lista = new ArrayList<>();
         for (int i = inicio; i < inicio + quantidade; i++) {
@@ -33,7 +33,7 @@ public class Principal {
         }
         return lista;
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -50,7 +50,7 @@ public class Principal {
         Item item8[] = new Item[80001];
         Item item9[] = new Item[90001];
         Item item10[] = new Item[100001];
-        
+
         // Para o caso aleatorio
         List<Item> item01 = criaListaOrdenada(0, 10000);
         List<Item> item02 = criaListaOrdenada(0, 20000);
@@ -62,7 +62,7 @@ public class Principal {
         List<Item> item08 = criaListaOrdenada(0, 80000);
         List<Item> item09 = criaListaOrdenada(0, 90000);
         List<Item> item010 = criaListaOrdenada(0, 100000);
-        
+
         // Criando os vetores aleatorios
         insereElementosAleatorios(item01, item1);
         insereElementosAleatorios(item02, item2);
@@ -74,7 +74,7 @@ public class Principal {
         insereElementosAleatorios(item08, item8);
         insereElementosAleatorios(item09, item9);
         insereElementosAleatorios(item010, item10);
-        
+
         /*
         // Caso ordenado crescente
         // Inicializando os vetores
@@ -120,9 +120,8 @@ public class Principal {
         
         System.out.println("Caso ordenado\n");
         
-        */
-        
-        /*
+         */
+ /*
         // Caso ordenado decrescente
         // Inicializando os vetores
         for (int i = 10000; i >= 1; i--) {
@@ -167,9 +166,7 @@ public class Principal {
         
         // Ordenando e printando o tempo
         System.out.println("Caso ordenado decrescente\n");
-        */
-        
-        
+         */
         System.out.println("Caso ordenado decrescente\n");
         JHeapSort.heapsort(item1, 10000);
         JHeapSort.heapsort(item2, 20000);
@@ -182,8 +179,7 @@ public class Principal {
         JHeapSort.heapsort(item9, 90000);
         JHeapSort.heapsort(item10, 100000);
         System.out.println("\n\n");
-      
-        
+
     }
 
 }

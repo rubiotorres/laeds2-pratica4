@@ -68,7 +68,7 @@ public class JHeapSort {
             v[j + 1] = x;
         }
     }
-    
+
     public static void ordenaPorInsercaoComBuscaBinaria(Item v[], int n) {
         for (int i = 2; i <= n; i++) {
             int meio, ind;
@@ -98,7 +98,7 @@ public class JHeapSort {
             v[ind] = x;
         }
     }
-    
+
     public static void shellsort(Item v[], int n) {
         int h = 1;
         do {
@@ -120,11 +120,11 @@ public class JHeapSort {
             }
         } while (h != 1);
     }
-    
+
     public static void quicksort(Item v[], int n) {
         ordena(v, 1, n);
     }
-    
+
     public static void heapsort(Item v[], int n) {
         // @{\it Usa a classe FPHeapMax do Programa~\ref{prog:fpheap}}@
         JHeap jheap = new JHeap(v);

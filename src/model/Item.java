@@ -30,7 +30,8 @@ public class Item {
     public int recuperaChave() {
         return chave;
     }
-   public void alteraChave(int chave){
-       this.chave=chave;
-   }
+
+    public void alteraChave(int chave) {
+        this.chave = chave;
+    }
 }
