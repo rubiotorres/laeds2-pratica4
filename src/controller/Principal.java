@@ -6,13 +6,34 @@
 package controller;
 
 import model.*;
+import java.util.*;
 
 /**
  *
- * @author r-torres
+ * @author r-torres, MarceloFCandido, gabrieldutra
  */
 public class Principal {
 
+    private static void insereElementosAleatorios(List<Item> lista, Item[] v) {
+        Random random = new Random();
+        int i = 1;
+        while (!lista.isEmpty()) {
+            int indiceAleatorio = random.nextInt(lista.size());
+            Item itemAleatorio = lista.get(indiceAleatorio);
+            v[i] = itemAleatorio;
+            lista.remove(itemAleatorio);
+            i++;
+        }
+    }
+    
+    private static List<Item> criaListaOrdenada(int inicio, int quantidade) {
+        ArrayList<Item> lista = new ArrayList<>();
+        for (int i = inicio; i < inicio + quantidade; i++) {
+            lista.add(new Item(i));
+        }
+        return lista;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -29,7 +50,31 @@ public class Principal {
         Item item8[] = new Item[80001];
         Item item9[] = new Item[90001];
         Item item10[] = new Item[100001];
-
+        
+        // Para o caso aleatorio
+        List<Item> item01 = criaListaOrdenada(0, 10000);
+        List<Item> item02 = criaListaOrdenada(0, 20000);
+        List<Item> item03 = criaListaOrdenada(0, 30000);
+        List<Item> item04 = criaListaOrdenada(0, 40000);
+        List<Item> item05 = criaListaOrdenada(0, 50000);
+        List<Item> item06 = criaListaOrdenada(0, 60000);
+        List<Item> item07 = criaListaOrdenada(0, 70000);
+        List<Item> item08 = criaListaOrdenada(0, 80000);
+        List<Item> item09 = criaListaOrdenada(0, 90000);
+        List<Item> item010 = criaListaOrdenada(0, 100000);
+        
+        // Criando os vetores aleatorios
+        insereElementosAleatorios(item01, item1);
+        insereElementosAleatorios(item02, item2);
+        insereElementosAleatorios(item03, item3);
+        insereElementosAleatorios(item04, item4);
+        insereElementosAleatorios(item05, item5);
+        insereElementosAleatorios(item06, item6);
+        insereElementosAleatorios(item07, item7);
+        insereElementosAleatorios(item08, item8);
+        insereElementosAleatorios(item09, item9);
+        insereElementosAleatorios(item010, item10);
+        
         /*
         // Caso ordenado crescente
         // Inicializando os vetores
@@ -124,6 +169,8 @@ public class Principal {
         System.out.println("Caso ordenado decrescente\n");
         */
         
+        
+        System.out.println("Caso ordenado decrescente\n");
         JHeapSort.heapsort(item1, 10000);
         JHeapSort.heapsort(item2, 20000);
         JHeapSort.heapsort(item3, 30000);
